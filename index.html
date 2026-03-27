@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поддержать</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 32px 24px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 30px;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #d1d5db;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9ca3af;
+      margin-bottom: 10px;
+    }
+
+    .card-number-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .card-number {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      word-break: break-word;
+    }
+
+    .copy-btn,
+    .tg-link {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .copy-btn {
+      background: #2563eb;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .copy-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .tg-link {
+      background: #22c55e;
+      color: white;
+    }
+
+    .tg-link:hover {
+      background: #16a34a;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Поддержать</h1>
+    <p>Если хотите поддержать, перевод можно отправить по номеру карты ниже.</p>
+
+    <div class="section-title">Номер карты</div>
+    <div class="card-number-box">
+      <div class="card-number" id="cardNumber">0000 0000 0000 0000</div>
+    </div>
+
+    <button class="copy-btn" onclick="copyCardNumber()">Скопировать номер карты</button>
+
+    <div class="section-title">Телеграм-канал</div>
+    <a
+      class="tg-link"
+      href="https://t.me/your_channel"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Перейти в Telegram
+    </a>
+
+    <div class="note">Замените номер карты и ссылку на свои.</div>
+  </div>
+
+  <script>
+    function copyCardNumber() {
+      const cardNumber = document.getElementById("cardNumber").innerText;
+      navigator.clipboard.writeText(cardNumber)
+        .then(() => alert("Номер карты скопирован"))
+        .catch(() => alert("Не удалось скопировать номер карты"));
+    }
+  </script>
+</body>
+</html>
