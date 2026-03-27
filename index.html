@@ -34,14 +34,8 @@
     }
 
     h1 {
-      margin: 0 0 12px;
+      margin: 0 0 20px;
       font-size: 30px;
-    }
-
-    p {
-      margin: 0 0 24px;
-      color: #d1d5db;
-      line-height: 1.5;
     }
 
     .section-title {
@@ -66,6 +60,7 @@
       font-weight: bold;
       letter-spacing: 1px;
       white-space: nowrap;
+      color: #ffffff; /* белый цвет */
     }
 
     .copy-btn,
@@ -84,12 +79,12 @@
     }
 
     .copy-btn {
-      background: #2563eb;
-      color: white;
+      background: #7c3aed; /* фиолетовая */
+      color: #ffffff;
     }
 
     .copy-btn:hover {
-      background: #1d4ed8;
+      background: #6d28d9;
     }
 
     .tg-link {
@@ -111,14 +106,13 @@
 <body>
   <div class="card">
     <h1>Поддержать</h1>
-    <p>Если хотите поддержать, перевод можно отправить по номеру карты ниже.</p>
 
     <div class="section-title">Номер карты</div>
     <div class="card-number-box">
-      <div class="card-number" id="cardNumber">5228 6005 1641 7448</div>
+      <div class="card-number" id="cardNumber">5228 6005 1641 7468</div>
     </div>
 
-    <button class="copy-btn" onclick="copyCardNumber()">Скопировать номер карты</button>
+    <button class="copy-btn" onclick="copyCardNumber()">скопировать номер карты</button>
 
     <div class="section-title">Ссылки</div>
 
@@ -140,15 +134,15 @@
       связаться со мной
     </a>
 
-    <div class="note">Спасибо за поддержку 💙</div>
+    <div class="note">Спасибо за поддержку 💜</div>
   </div>
 
   <script>
     function copyCardNumber() {
       const cardNumber = document.getElementById("cardNumber").innerText;
       navigator.clipboard.writeText(cardNumber)
-        .then(() => alert("Номер карты скопирован"))
-        .catch(() => alert("Не удалось скопировать номер карты"));
+        .then(() => alert("номер карты скопирован"))
+        .catch(() => alert("не удалось скопировать номер карты"));
     }
   </script>
 </body>
