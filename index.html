@@ -58,13 +58,14 @@
       border-radius: 14px;
       padding: 18px;
       margin-bottom: 16px;
+      overflow-x: auto;
     }
 
     .card-number {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
-      letter-spacing: 2px;
-      word-break: break-word;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     .copy-btn,
@@ -79,12 +80,12 @@
       cursor: pointer;
       text-decoration: none;
       transition: 0.2s ease;
+      margin-bottom: 12px;
     }
 
     .copy-btn {
       background: #2563eb;
       color: white;
-      margin-bottom: 20px;
     }
 
     .copy-btn:hover {
@@ -101,7 +102,7 @@
     }
 
     .note {
-      margin-top: 18px;
+      margin-top: 10px;
       font-size: 13px;
       color: #9ca3af;
     }
@@ -114,22 +115,32 @@
 
     <div class="section-title">Номер карты</div>
     <div class="card-number-box">
-      <div class="card-number" id="cardNumber">0000 0000 0000 0000</div>
+      <div class="card-number" id="cardNumber">5228 6005 1641 7448</div>
     </div>
 
     <button class="copy-btn" onclick="copyCardNumber()">Скопировать номер карты</button>
 
-    <div class="section-title">Телеграм-канал</div>
+    <div class="section-title">Ссылки</div>
+
     <a
       class="tg-link"
-      href="https://t.me/your_channel"
+      href="https://t.me/Sch0lnitca44"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Перейти в Telegram
+      тг-канал
     </a>
 
-    <div class="note">Замените номер карты и ссылку на свои.</div>
+    <a
+      class="tg-link"
+      href="https://t.me/sch0lnitca"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      связаться со мной
+    </a>
+
+    <div class="note">Спасибо за поддержку 💙</div>
   </div>
 
   <script>
